@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+          
+<!-- 实体类包名，输入自己的项目实体包名即可 -->
+<hibernate-mapping package="pojo">
+    <!-- 实体类名及数据库表名 -->
+    <class name = "Product" table = "product">
+          <!-- 实体类属性id映射数据库表里的id -->
+          <id name = "id" column = "id">
+              <!-- <generator class="native"> 意味着id的自增长方式采用数据库的本地方式 -->
+              <generator class = "native"/>
+          </id>
+          <property name="name" column="name"></property>
+          <property name="price" column="price"></property>
+    </class>
+</hibernate-mapping>
